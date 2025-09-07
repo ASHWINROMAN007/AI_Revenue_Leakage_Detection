@@ -2063,4 +2063,4 @@ def generate_detailed_report(session_id):
         return jsonify({"error": f"Error generating detailed report: {str(e)}"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5001)
