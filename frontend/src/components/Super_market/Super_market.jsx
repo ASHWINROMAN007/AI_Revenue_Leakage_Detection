@@ -55,7 +55,7 @@ const SuperMarket = ({ onBackToHome, onResultsReady }) => {
       
       if (uploadResult.success && uploadResult.session_id) {
         // Get the full results using session ID
-        const response = await fetch(`http://localhost:5000/api/results/${uploadResult.session_id}`);
+        const response = await fetch(`http://localhost:5001/api/results/${uploadResult.session_id}`);
         const data = await response.json();
         
         if (data.success) {
@@ -255,7 +255,7 @@ const SuperMarket = ({ onBackToHome, onResultsReady }) => {
     setReportGenerating(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/supermarket/generate-report/${results.session_id}`,
+        `http://localhost:5001/api/supermarket/generate-report/${results.session_id}`,
         { method: 'POST' }
       );
       

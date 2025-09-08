@@ -234,7 +234,7 @@ const ResultsPage = ({ sessionData, onBackToHome, onVisualization, onAnalyzeNewD
           : `/api/supermarket/generate-report/${results.session_id || 'latest'}`;
       }
       
-      const response = await fetch(`http://localhost:5000${endpoint}`, { 
+      const response = await fetch(`http://localhost:5001${endpoint}`, { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

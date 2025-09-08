@@ -38,7 +38,7 @@ const SuperMarket = ({ onBackToHome }) => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:5000/api/supermarket/predict', {
+      const response = await fetch('http://localhost:5001/api/supermarket/predict', {
         method: 'POST',
         body: formData,
       });
@@ -62,7 +62,7 @@ const SuperMarket = ({ onBackToHome }) => {
   const downloadFile = async (outputType, sessionId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/supermarket/download/${outputType}/${sessionId}`
+        `http://localhost:5001/api/supermarket/download/${outputType}/${sessionId}`
       );
       
       if (response.ok) {
@@ -91,7 +91,7 @@ const SuperMarket = ({ onBackToHome }) => {
     setReportGenerating(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/supermarket/generate-report/${results.session_id}`,
+        `http://localhost:5001/api/supermarket/generate-report/${results.session_id}`,
         { method: 'POST' }
       );
       
