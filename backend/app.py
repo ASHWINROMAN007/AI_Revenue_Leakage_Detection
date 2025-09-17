@@ -542,7 +542,7 @@ Focus on providing specific, actionable recommendations that address the root ca
             if not recommendations:
                 recommendations = [rec.strip() for rec in recommendations_text.split('\n\n') if rec.strip()]
             
-            # Ensure we don't have any duplicates and limit to 10 recommendations
+            # Ensure we don't have any duplicates and limit to 10 recommendation
             seen = set()
             unique_recommendations = []
             for rec in recommendations:
